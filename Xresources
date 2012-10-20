@@ -1,0 +1,66 @@
+!! urxvt256
+!!
+
+! scrollbar style - rxvt (default), plain (most compact), next, or xterm
+urxvt256.scrollstyle: rxvt
+
+! colors
+! urxvt256.cursorColor:  #dc74d1
+! urxvt256.pointerColor: #dc74d1
+! urxvt256.background:   #0e0e0e
+! urxvt256.foreground:   #4ad5e1
+! urxvt256.color0:       #000000
+! urxvt256.color8:       #8b8f93
+! urxvt256.color1:       #dc74d1
+! urxvt256.color9:       #dc74d1
+! urxvt256.color2:       #0eb8c7
+! urxvt256.color10:      #0eb8c7
+! urxvt256.color3:       #dfe37e
+! urxvt256.color11:      #dfe37e
+! urxvt256.color5:       #9e88f0
+! urxvt256.color13:      #9e88f0
+! urxvt256.color6:       #73f7ff
+! urxvt256.color14:      #73f7ff
+! urxvt256.color7:       #e1dddd
+! urxvt256.color15:      #e1dddd
+
+urxvt256*foreground: #f2f2f2
+urxvt256*background: #101010
+
+! Normal
+! color0    black
+! color1    red
+! color2    green
+! color3    yellow
+! color4    blue
+! color5    purple
+! color6    cyan
+! color7    white
+
+urxvt256*color0:    #6c6c6c
+urxvt256*color1:    #e9897c
+urxvt256*color2:    #b6e77d
+urxvt256*color3:    #ecebbe
+urxvt256*color4:    #a9cdeb
+urxvt256*color5:    #ea96eb
+urxvt256*color6:    #c9caec
+urxvt256*color7:    #f2f2f2
+
+! Light
+! color8    black
+! color9    red
+! color10    green
+! color11    yellow
+! color12    blue
+! color13    purple
+! color14    cyan
+! color15    white
+
+urxvt256*color8:    #747474
+urxvt256*color9:    #f99286
+urxvt256*color10:    #c3f786
+urxvt256*color11:    #fcfbcc
+urxvt256*color12:    #b6defb
+urxvt256*color13:    #fba1fb
+urxvt256*color14:    #d7d9fc
+urxvt256*color15:    #e2e2e2

@@ -1,0 +1,9 @@
+[user]
+	name = Benjamin Jones
+	email = bjones@galois.com
+[core]
+	editor = vi
+[merge]
+	tool = vimdiff
+[github]
+	user = bjones-galois
