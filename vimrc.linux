@@ -41,7 +41,6 @@ set nobackup            " no backup~ files.
 set viminfo='20,\"500   " remember copy registers after quitting in the .viminfo file -- 20 jump links, regs up to 500 lines'
 set hidden              " remember undo after quitting
 set history=50          " keep 50 lines of command history
-set mouse=v             " use mouse in visual mode (not normal,insert,command,help mode
 
 " paste mode toggle (needed when using autoindent/smartindent)
 map <F10> :set paste<CR>
@@ -78,7 +77,7 @@ autocmd BufWinLeave * call clearmatches()
 let @h = "yypVr" " .rst headers
 let @q = "{!}fmt" " reformat paragraphs
 let @w = ":%s/\\s+$//" " remove all trailing whitespace
-let @c = ":w !pbcopy"  " copy buffer to mac clipboard
+let @c = ":w !xclip"  " copy buffer to X clipboard
 :nnoremap <Leader>w :%s/\s\+$//<CR>
 
 """"""""""""""""""""""""""
