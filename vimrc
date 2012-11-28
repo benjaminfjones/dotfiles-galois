@@ -6,6 +6,8 @@ set modeline
 set modelines=5
 set nocompatible
 
+set spell spelllang=en_us
+
 " Display settings
 set background=dark     " enable for dark terminals
 set nowrap              " dont wrap lines
@@ -99,6 +101,7 @@ let @w = ":%s/\\s+$//" " remove all trailing whitespace
 let @c = ":w !pbcopy"  " copy buffer to mac clipboard
 :nnoremap <Leader>w :%s/\s\+$//<CR>
 :nnoremap <Leader>p :w !pbcopy<CR><CR>
+:nnoremap <CR> :noh<CR><CR> " This unsets the 'last search pattern' register by hitting return
 
 """"""""""""""""""""""""""
 " filetype specific stuff

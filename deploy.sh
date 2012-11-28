@@ -2,7 +2,7 @@
 OS=`uname | grep Darwin`
 PWD=`pwd`
 MAC_FILES="bashrc bash_profile bash_aliases tmux.conf gitconfig vimrc"
-LINUX_FILES="bashrc bash_profile bash_aliases tmux.conf gitconfig Xresrouces xmonad vimrc.linux"
+LINUX_FILES="bashrc bash_profile bash_aliases tmux.conf gitconfig Xresrouces vimrc.linux"
 MV_CMD="mv"
 LN_CMD="ln"
 
@@ -18,7 +18,7 @@ for file in $FILES; do
   FN=`echo $file | sed 's/\.linux//'`
   DOT=$PWD/${file}
   HM=$HOME/.${FN}
-  if [ -f $HM ]; then
+  if [ -e $HM ] || [ -h $HM ]; then
     echo "moving existing dotfile $HM to $HM.BAK"
     $MV_CMD $HM $HM.BAK
   fi

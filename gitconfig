@@ -2,7 +2,7 @@
 	name = Benjamin Jones
 	email = bjones@galois.com
 [core]
-	editor = vi
+	editor = /usr/bin/vim
 [merge]
 	tool = vimdiff
 [github]
