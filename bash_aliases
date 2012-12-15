@@ -37,7 +37,7 @@ alias reload_prompt='source ~/.bashrc'
 
 alias dev="cd ~/git"
 
-alias ls='ls --color=auto'
+alias lsc='ls --color=auto'
 alias l.='ls -la .'
 alias ll='ls -l'
 alias la='ls -la'
