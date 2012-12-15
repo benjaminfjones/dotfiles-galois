@@ -30,8 +30,8 @@ set incsearch
 set esckeys             " map missed escape sequences (enables keypad keys)
 set ignorecase          " case insensitive searching
 set smartcase           " but become case sensitive if you type uppercase characters
-set smartindent         " smart auto indenting
-set smarttab            " smart tab handling for indenting
+" set smartindent         " smart auto indenting
+" set smarttab            " smart tab handling for indenting
 set magic               " change the way backslashes are used in search patterns
 set bs=indent,eol,start " Allow backspacing over everything in insert mode
 set expandtab           " turn a tabs into spaces
@@ -43,24 +43,51 @@ set nobackup            " no backup~ files.
 set viminfo='20,\"500   " remember copy registers after quitting in the .viminfo file -- 20 jump links, regs up to 500 lines'
 set hidden              " remember undo after quitting
 set history=50          " keep 50 lines of command history
-set mouse=v             " use mouse in visual mode (not normal,insert,command,help mode
-
-" paste mode toggle (needed when using autoindent/smartindent)
-map <F10> :set paste<CR>
-map <F11> :set nopaste<CR>
-imap <F10> <C-O>:set paste<CR>
-imap <F11> <nop>
-set pastetoggle=<F11>
 
 """"""""""""""""""""""""""""""""""""""
 " Misc Plugins
 """"""""""""""""""""""""""""""""""""""
 
-" pathogen
-call pathogen#infect()
-" neocomplcache
-let g:neocomplcache_enable_at_startup = 1
-" ghc-mod and neco-ghc
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'https://github.com/vim-scripts/vimwiki'
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'https://github.com/Shougo/vimproc'
+Bundle 'https://github.com/eagletmt/ghcmod-vim'
+Bundle 'https://github.com/ujihisa/neco-ghc'
+ " vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'Zenburn'
+" non github repos
+Bundle 'git://git.wincent.com/command-t.git'
+" ...
+
+filetype plugin indent on     " required!
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+
+""""""""""""""""""""""""""""""""""""""
+" Misc Plugins
+""""""""""""""""""""""""""""""""""""""
+
+" for ghc-mod and neco-ghc
 let $PATH = $PATH . ':' . expand("~/.cabal/bin")
 
 """"""""""""""""""""""""""""""""""""""
@@ -101,12 +128,11 @@ let @w = ":%s/\\s+$//" " remove all trailing whitespace
 let @c = ":w !pbcopy"  " copy buffer to mac clipboard
 :nnoremap <Leader>w :%s/\s\+$//<CR>
 :nnoremap <Leader>p :w !pbcopy<CR><CR>
-:nnoremap <CR> :noh<CR><CR> " This unsets the 'last search pattern' register by hitting return
+" :nnoremap <CR> :noh<CR><CR> " This unsets the 'last search pattern' register by hitting return
 
 """"""""""""""""""""""""""
 " filetype specific stuff
 """"""""""""""""""""""""""
-filetype indent plugin on
 if has("autocmd")
 
     " if bash is sh.
