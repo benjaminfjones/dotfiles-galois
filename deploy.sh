@@ -2,7 +2,7 @@
 OS=`uname | grep Darwin`
 PWD=`pwd`
 MAC_FILES="bashrc bash_profile bash_aliases tmux.conf gitconfig vimrc"
-LINUX_FILES="bashrc bash_profile bash_aliases tmux.conf gitconfig Xresrouces vimrc.linux"
+LINUX_FILES="bashrc bash_profile bash_aliases tmux.conf gitconfig Xresources vimrc.linux"
 MV_CMD="mv"
 LN_CMD="ln"
 
