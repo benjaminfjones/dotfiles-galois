@@ -36,6 +36,8 @@ alias reload='source ~/.bash_profile'
 alias reload_prompt='source ~/.bashrc'
 
 alias dev="cd ~/git"
+alias gits="git status"
+alias gcm="git commit -m"
 
 alias lsc='ls --color=auto'
 alias l.='ls -la .'
