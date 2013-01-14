@@ -54,6 +54,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Zenburn'
+Bundle 'tpope/vim-markdown'
 " vim-scripts repos
 "Bundle 'L9'
 "Bundle 'FuzzyFinder'

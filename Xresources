@@ -4,7 +4,8 @@
 ! scrollbar style - rxvt (default), plain (most compact), next, or xterm
 ! urxvt.scrollstyle: rxvt
 urxvt.scrollBar: false
-urxvt.font: xft:DroidSansMono:size=10
+!urxvt.font: xft:DroidSansMono:size=10
+urxvt.font: xft:terminus:size=12
 
 ! colors
 ! urxvt.cursorColor:  #dc74d1
