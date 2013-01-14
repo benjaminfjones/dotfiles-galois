@@ -121,3 +121,7 @@ export CLICOLOR="true"
 #export LSCOLORS="exfxcxdxbxegedabagacad"
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 export PATH=$PATH:$HOME/bin
+
+echo
+fortune
+echo
