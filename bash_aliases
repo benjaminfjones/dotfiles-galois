@@ -27,6 +27,9 @@ alias gits='git status'
 ## python webserver
 alias pyserve='python -m SimpleHTTPServer'
 
+## sage aliases
+alias mysage='~/sage/latest/sage'
+
 ## google-chrome
 alias chrome='google-chrome &> /dev/null &'
 

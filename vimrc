@@ -64,6 +64,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'https://github.com/Shougo/vimproc'
 Bundle 'https://github.com/eagletmt/ghcmod-vim'
 Bundle 'https://github.com/ujihisa/neco-ghc'
+Bundle 'scrooloose/nerdtree.git'
  " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -151,7 +152,8 @@ if has("autocmd")
 
 		" Haskell
 		"" use ghc functionality for haskell files
-		au Bufenter *.hs compiler ghc
+		"au Bufenter *.hs compiler ghc
+        au Bufenter *.hs set nospell
 		au FileType haskell setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
 		"" configure browser for haskell_doc.vim
 		let g:haddock_browser = "open"

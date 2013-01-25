@@ -44,22 +44,6 @@ bash_prompt_command() {
 		NEW_PWD=${trunc_symbol}/${NEW_PWD#*/}
 	fi
 
-	# Setup variable for current git branch, if available
-	if ! git rev-parse --git-dir > /dev/null 2>&1; then
-		GIT_CURRENT_BRANCH=""
-		GIT_CURRENT_BRANCH_STATE_COLOR=""
-	else
-		if ! git diff --quiet 2>/dev/null >&2; then
-			GIT_CURRENT_BRANCH_STATE_COLOR='\[\033[0;31m\]' #git dirty HEAD
-		else
-			if ! git diff --cached --quiet 2>/dev/null >&2; then
-				GIT_CURRENT_BRANCH_STATE_COLOR='\[\033[0;33m\]' #git dirty index
-			else
-				GIT_CURRENT_BRANCH_STATE_COLOR='\[\033[0;32m\]' #git clean branch
-			fi
-		fi
-		GIT_CURRENT_BRANCH=" [$(git branch 2>/dev/null| sed -n '/^\*/s/^\* //p')]"
-	fi
 	bash_prompt # call again this function to update PS1 to use corresponding GIT_CURRENT_BRANCH_STATE_COLOR
 }
 
@@ -108,7 +92,7 @@ bash_prompt() {
     # Git branch, use at your own risk
 	#PS1="${NONE}[\t${NONE}] ${NONE}[${R}\u${R}@${R}\h ${B}\${NEW_PWD}${NONE}]${G}${GIT_CURRENT_BRANCH_STATE_COLOR}\${GIT_CURRENT_BRANCH}${NONE}\\$ ${NONE}"
 	PS1="${NONE}[\t${NONE}] ${NONE}[${R}\u${R}@${R}\h ${B}\${NEW_PWD}${NONE}]\\$ ${NONE}"
-	SUDO_PS1="${NONE}[\t${NONE}] ${NONE}[${R}\u${R}@${R}\h ${B}\${NEW_PWD}${NONE}]\\$ ${NONE}"
+	SUDO_PS1="${NONE}[\t${NONE}] ${NONE}[${R}\u${R}@${R}\h ${B}\${NEW_PWD}${NONE}]\n\\$ ${NONE}"
 }
 
 PROMPT_COMMAND=bash_prompt_command
@@ -118,10 +102,8 @@ bash_prompt
 #shopt -s checkwinsize
 #TERM "xterm-color"
 export CLICOLOR="true"
-#export LSCOLORS="exfxcxdxbxegedabagacad"
 export LSCOLORS="gxfxcxdxbxegedabagacad"
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin:$HOME/.cabal/bin:$HOME/Library/Haskell/bin
 
-echo
-fortune
-echo
+# fortune only if we have a tty
+tty -s && (echo; /usr/local/bin/fortune; echo)
