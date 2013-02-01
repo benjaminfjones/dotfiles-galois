@@ -5,7 +5,10 @@
 ! urxvt.scrollstyle: rxvt
 urxvt.scrollBar: false
 !urxvt.font: xft:DroidSansMono:size=10
-urxvt.font: xft:terminus:size=12
+!urxvt.font: xft:terminus:size=12
+urxvt*termName: rxvt-256color
+urxvt*font: xft:Dejavu Sans Mono:pixelsize=10.5
+urxvt*boldFont: xft:Dejavu Sans Mono:pixelsize=10.5
 
 ! colors
 ! urxvt.cursorColor:  #dc74d1

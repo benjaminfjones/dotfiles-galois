@@ -98,11 +98,6 @@ bash_prompt() {
 PROMPT_COMMAND=bash_prompt_command
 bash_prompt
 
-# Make bash check its window size after a process completes
-#shopt -s checkwinsize
-#TERM "xterm-color"
-export CLICOLOR="true"
-export LSCOLORS="gxfxcxdxbxegedabagacad"
 export PATH=$PATH:$HOME/bin:$HOME/.cabal/bin:$HOME/Library/Haskell/bin
 
 # fortune only if we have a tty
