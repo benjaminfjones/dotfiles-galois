@@ -65,6 +65,7 @@ Bundle 'https://github.com/Shougo/vimproc'
 Bundle 'https://github.com/eagletmt/ghcmod-vim'
 Bundle 'https://github.com/ujihisa/neco-ghc'
 Bundle 'scrooloose/nerdtree.git'
+Bundle 'Lokaltog/vim-powerline'
  " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -144,20 +145,11 @@ if has("autocmd")
 
 	" Put these in an autocmd group, so that we can delete them easily.
 	augroup mysettings
-		au FileType xslt,xml,css,html,xhtml,javascript,sh,config,c,cpp,docbook set smartindent shiftwidth=2 softtabstop=2 expandtab
+		au FileType xslt,xml,css,html,xhtml,javascript,sh,config,c,cpp,docbook set shiftwidth=2 softtabstop=2 expandtab
 		au FileType tex set wrap shiftwidth=2 softtabstop=2 expandtab
 
 		" Confirm to PEP8
-		au FileType python set tabstop=4 softtabstop=4 expandtab shiftwidth=4 cinwords=if,elif,else,for,while,try,except,finally,def,class
-
-		" Haskell
-		"" use ghc functionality for haskell files
-		"au Bufenter *.hs compiler ghc
-        au Bufenter *.hs set nospell
-		au FileType haskell setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
-		"" configure browser for haskell_doc.vim
-		let g:haddock_browser = "open"
-		let g:haddock_browser_callformat = "%s %s"
+		au FileType python haskell set tabstop=4 softtabstop=4 expandtab shiftwidth=4 cinwords=if,elif,else,for,while,try,except,finally,def,class
 	augroup END
 
 	" Always jump to the last known cursor position.
@@ -168,8 +160,6 @@ if has("autocmd")
 				\   exe "normal g`\"" |
 				\ endif
 
-
     " JSON syntax
     autocmd BufNewFile,BufRead *.json set ft=javascript
-
 endif " has("autocmd")
