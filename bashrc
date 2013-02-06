@@ -98,6 +98,8 @@ bash_prompt() {
 PROMPT_COMMAND=bash_prompt_command
 bash_prompt
 
+export CLICOLOR="true"
+export LSCOLORS="gxfxcxdxbxegedabagacad"
 export PATH=$PATH:$HOME/bin:$HOME/.cabal/bin:$HOME/Library/Haskell/bin
 
 # fortune only if we have a tty
