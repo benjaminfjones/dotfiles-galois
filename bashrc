@@ -100,6 +100,7 @@ bash_prompt
 
 export CLICOLOR="true"
 export LSCOLORS="gxfxcxdxbxegedabagacad"
+export PATH=$PATH:/usr/sbin:/usr/local/sbin
 export PATH=$PATH:$HOME/bin:$HOME/.cabal/bin:$HOME/Library/Haskell/bin
 
 # fortune only if we have a tty
