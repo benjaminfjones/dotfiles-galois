@@ -6,7 +6,7 @@ set modeline
 set modelines=5
 set nocompatible
 
-set spell spelllang=en_us
+set nospell spelllang=en_us
 
 " Display settings
 set background=dark     " enable for dark terminals
@@ -147,9 +147,8 @@ if has("autocmd")
 	augroup mysettings
 		au FileType xslt,xml,css,html,xhtml,javascript,sh,config,c,cpp,docbook set shiftwidth=2 softtabstop=2 expandtab
 		au FileType tex set wrap shiftwidth=2 softtabstop=2 expandtab
-
-		" Confirm to PEP8
-		au FileType python haskell set tabstop=4 softtabstop=4 expandtab shiftwidth=4 cinwords=if,elif,else,for,while,try,except,finally,def,class
+		au FileType python set tabstop=4 softtabstop=4 expandtab shiftwidth=4 cinwords=if,elif,else,for,while,try,except,finally,def,class
+		au FileType haskell set tabstop=4 softtabstop=4 expandtab shiftwidth=4
 	augroup END
 
 	" Always jump to the last known cursor position.
