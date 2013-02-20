@@ -104,4 +104,4 @@ export PATH=$PATH:/usr/sbin:/usr/local/sbin
 export PATH=$PATH:$HOME/bin:$HOME/.cabal/bin:$HOME/Library/Haskell/bin
 
 # fortune only if we have a tty
-tty -s && (echo; /usr/local/bin/fortune; echo)
+tty -s && (echo; /usr/local/bin/fortune | cowsay; echo)
