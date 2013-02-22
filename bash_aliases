@@ -33,6 +33,9 @@ alias mysage='~/sage/latest/sage'
 ## google-chrome
 alias chrome='google-chrome &> /dev/null &'
 
+## Dropbox
+alias dropboxd='~/.dropbox-dist/dropboxd'
+
 ## misc
 
 alias reload='source ~/.bash_profile'
@@ -51,3 +54,4 @@ alias fn='find . -name $@'
 
 alias showall='defaults write com.apple.Finder AppleShowAllFiles true'
 alias showallnot='defaults write com.apple.Finder AppleShowAllFiles false'
+
