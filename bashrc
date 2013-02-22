@@ -103,5 +103,10 @@ export LSCOLORS="gxfxcxdxbxegedabagacad"
 export PATH=$PATH:/usr/sbin:/usr/local/sbin
 export PATH=$PATH:$HOME/bin:$HOME/.cabal/bin:$HOME/Library/Haskell/bin
 
+# include .bash_aliases if it exists
+if [ -f ~/.bash_aliases ]; then
+    source ~/.bash_aliases
+fi
+
 # fortune only if we have a tty
 tty -s && (echo; /usr/local/bin/fortune | cowsay; echo)
