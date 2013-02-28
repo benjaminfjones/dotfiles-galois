@@ -10,6 +10,7 @@ script to symlink dotfiles to their correct places.
     git clone git@github.com:benjaminfjones/dotfiles-galois.git
     ./deploy.sh
 
-    git clone https://github.com/gmarik/vundle.git .vim/bundle/vundle
+    git clone https://github.com/benjaminfjones/vim-config ~/.vim
+    cd ~/.vim; zsh boot.sh
 
     rm -rf ~/.ssh && scp -r [key_host]:keys/ssh ~/.ssh
