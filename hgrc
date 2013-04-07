@@ -1,0 +1,15 @@
+[ui]
+username = Benjamin Jones <benjaminfjones@gmail.com>
+
+[extensions]
+# Enable the Mercurial queue extension.
+hgext.mq =
+color =
+
+[diff]
+git = true
+
+[color]
+qseries.applied = blue bold underline
+qseries.unapplied = green bold
+qseries.missing = red bold
