@@ -1,5 +1,0 @@
-# osx zsh config
-
-export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD  # solarized
-alias ls='ls -hG'
-alias grep='grep --color=auto'
