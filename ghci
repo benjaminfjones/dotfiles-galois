@@ -1,2 +1,2 @@
 -- :set +s
-:set prompt "ghci> "
+:set prompt "λ "
